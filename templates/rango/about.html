@@ -2,12 +2,19 @@
 
 {% load staticfiles %}
 
-{% block title %}Rango{% endblock %}
+{% block title %}About{% endblock %}
 
 {% block body_block %}
 
-        <h1>Rango says here is the about page.</h1>
-        <p> Number of times you've visited the site: {{ visits }}</p>
-        <img src="{% static "images/../../media/rango.jpg" %}" alt="Picture of Rango" /> <!-- Images -->
+    <div class="page-header">
+        <h1>About</h1>
+    </div>
+
+    <div>
+        <p>This is <strong>Rango's About Page.</strong></p>
+        <p>You've visited this site on <strong>{{ visits }} occasion(s)</strong>.</p>
+        <p>Here's a picture of Rango:</p>
+        <img  width="50%" height="100%" src="{% static "images/rango.jpg" %}" alt="Picture of Rango" /> <!-- New line -->
+    </div>
 
 {% endblock %}
